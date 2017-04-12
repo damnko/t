@@ -1,13 +1,19 @@
 {
   "name": "angular2-instagram",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Instagram like photo filter playground built with Angular2 (Web | Desktop)",
+  "repository": "https://github.com/damnko/t",
   "author": {
     "name": "Jay Kan",
     "email": "leicasper@gmail.com"
   },
   "main": "./src/electron/electron.js",
   "build": {
+    "publish": {
+      "provider": "github",
+      "owner": "damnko",
+      "repo": "t"
+    },
     "appId": "com.electron.angular2-instagram",
     "mac": {
       "category": "your.app.category.type"
@@ -45,7 +51,7 @@
     "start": "npm run development",
     "test": "cross-env NODE_ENV=test karma start",
     "test:client": "cross-env NODE_ENV=test karma start --single-run --coverage",
-    "pre-pack": "build --dir -w --ia32",
+    "pre-pack": "build --dir -w --ia32 -p always",
     "pack": "npm run build:electron && build --dir -lw"
   },
   "license": "MIT",
