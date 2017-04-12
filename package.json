@@ -45,7 +45,7 @@
     "start": "npm run development",
     "test": "cross-env NODE_ENV=test karma start",
     "test:client": "cross-env NODE_ENV=test karma start --single-run --coverage",
-    "packeasy": "build --dir -w --ia32 --prepackaged=/boh",
+    "pre-pack": "build --dir -w --ia32",
     "pack": "npm run build:electron && build --dir -lw"
   },
   "license": "MIT",
